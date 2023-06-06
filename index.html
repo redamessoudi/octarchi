@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Check my Architecture - OctArchi</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" />
+    <link rel="stylesheet" href="css/styles.css" />
+    <link rel="icon" href="img/favicon.ico">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Easy and headless approach to scoring and defining your architecture reliability">
+</head>
+
+<body>
+    <div class="container">
+        <div id="logoDiv" class="text-center">
+            <img src="img/octarchi_logo.png" alt="OctArchi" id="logoImg">
+            <h2 class="mb-4 text-center">No more guesswork, no more endless debates – just a fast, reliable, and
+                efficient way to measure your Architecture reliability and make informed decisions.</h2>
+        </div>
+
+        <div class="row">
+            <div class="col-md-6">
+                <div class="row">
+                    <div class="col-md-12">
+                        <h5 class="mb-6 text-center">Score from 1 to 5. Higher is better</h5>
+                    </div>
+
+                </div>
+                <!-- Input boxes start here -->
+                <!-- Evolutivity and Modularity -->
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <label for="score1"><b>Evolutivity</b></label>
+                            <input class="form-control" id="score1" type="number" min="1" max="5">
+                            <span id="score1Percent"></span>
+                            <button class="btn btn-link collapsed pl-0" type="button" data-toggle="collapse"
+                                data-target="#collapse1" aria-expanded="false">
+                                <i class="fas fa-info-circle"></i>
+                            </button>
+                            <div id="collapse1" class="collapse">
+                                <small class="text-muted">
+                                    <b>Definition</b>: How well the solution can adapt to future changes.<br>
+                                    <b>Example</b>: A solution with a microservices architecture would score high on
+                                    this criterion as it is easily scalable and can adapt to future requirements.
+                                </small>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <label for="score2"><b>Modularity</b></label>
+                            <input class="form-control" id="score2" type="number" min="1" max="5">
+                            <span id="score2Percent"></span>
+                            <button class="btn btn-link collapsed pl-0" type="button" data-toggle="collapse"
+                                data-target="#collapse2" aria-expanded="false">
+                                <i class="fas fa-info-circle"></i>
+                            </button>
+                            <div id="collapse2" class="collapse">
+                                <small class="text-muted">
+                                    <b>Definition</b>: Modularity refers to how well a solution is divided into
+                                    separate, interchangeable components.<br>
+                                    <b>Example</b>: For instance, a solution architecture using containerization for
+                                    different functionalities would be a good example of modularity, as each container
+                                    can function and be replaced independently.
+                                </small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <label for="score3"><b>Cost</b></label>
+                            <input class="form-control" id="score3" type="number" min="1" max="5">
+                            <span id="score3Percent"></span>
+                            <button class="btn btn-link collapsed pl-0" type="button" data-toggle="collapse"
+                                data-target="#collapse3" aria-expanded="false">
+                                <i class="fas fa-info-circle"></i>
+                            </button>
+                            <div id="collapse3" class="collapse">
+                                <small class="text-muted">
+                                    <b>Definition</b>: This refers to the financial investment required for a solution,
+                                    including initial development, maintenance, and potential expansion.<br>
+                                    <b>Example</b>: A cloud-based solution architecture can be cost-effective due to its
+                                    pay-as-you-go model, reducing the need for upfront infrastructure costs.
+                                </small>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <label for="score4"><b>Performance</b></label>
+                            <input class="form-control" id="score4" type="number" min="1" max="5">
+                            <span id="score4Percent"></span>
+                            <button class="btn btn-link collapsed pl-0" type="button" data-toggle="collapse"
+                                data-target="#collapse4" aria-expanded="false">
+                                <i class="fas fa-info-circle"></i>
+                            </button>
+                            <div id="collapse4" class="collapse">
+                                <small class="text-muted">
+                                    <b>Definition</b>: Performance refers to how efficiently a solution operates under a
+                                    given workload.<br>
+                                    <b>Example</b>: A solution architecture that utilizes caching mechanisms and load
+                                    balancers to handle high traffic would be considered to have good performance.
+                                </small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <label for="score5"><b>Simplicity</b></label>
+                            <input class="form-control" id="score5" type="number" min="1" max="5">
+                            <span id="score5Percent"></span>
+                            <button class="btn btn-link collapsed pl-0" type="button" data-toggle="collapse"
+                                data-target="#collapse5" aria-expanded="false">
+                                <i class="fas fa-info-circle"></i>
+                            </button>
+                            <div id="collapse5" class="collapse">
+                                <small class="text-muted">
+                                    <b>Definition</b>: Simplicity refers to how easy it is to understand, develop, and
+                                    maintain a solution.<br>
+                                    <b>Example</b>: An example could be a monolithic architecture where the application
+                                    is built as one cohesive unit, which could be simpler to understand than more
+                                    complex architectures.
+                                </small>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <label for="score6"><b>Testability</b></label>
+                            <input class="form-control" id="score6" type="number" min="1" max="5">
+                            <span id="score6Percent"></span>
+                            <button class="btn btn-link collapsed pl-0" type="button" data-toggle="collapse"
+                                data-target="#collapse6" aria-expanded="false">
+                                <i class="fas fa-info-circle"></i>
+                            </button>
+                            <div id="collapse6" class="collapse">
+                                <small class="text-muted">
+                                    <b>Definition</b>: This refers to how easily a solution can be tested to ensure it
+                                    is working as intended.<br>
+                                    <b>Example</b>: For example, a solution architecture that includes separate testing
+                                    environments and utilizes automated testing tools would be considered highly
+                                    testable.
+                                </small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <label for="score7"><b>Fault Tolerance</b></label>
+                            <input class="form-control" id="score7" type="number" min="1" max="5">
+                            <span id="score7Percent"></span>
+                            <button class="btn btn-link collapsed pl-0" type="button" data-toggle="collapse"
+                                data-target="#collapse7" aria-expanded="false">
+                                <i class="fas fa-info-circle"></i>
+                            </button>
+                            <div id="collapse7" class="collapse">
+                                <small class="text-muted">
+                                    <b>Definition</b>: This refers to a solution's ability to continue functioning even
+                                    when parts of it fail.<br>
+                                    <b>Example</b>: For example, a solution architecture that includes redundancy, such
+                                    as backup servers or databases, would be considered fault tolerant.
+                                </small>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <label for="score8"><b>Green IT</b></label>
+                            <input class="form-control" id="score8" type="number" min="1" max="5">
+                            <span id="score8Percent"></span>
+                            <button class="btn btn-link collapsed pl-0" type="button" data-toggle="collapse"
+                                data-target="#collapse8" aria-expanded="false">
+                                <i class="fas fa-info-circle"></i>
+                            </button>
+                            <div id="collapse8" class="collapse">
+                                <small class="text-muted">
+                                    <b>Definition</b>: This refers to the environmental friendliness of a solution,
+                                    including energy efficiency and the responsible use of resources.<br>
+                                    <b>Example</b>: For example, a solution architecture that optimizes server usage to
+                                    reduce energy consumption, or uses a cloud provider committed to renewable energy,
+                                    would be considered to align with Green IT principles.
+                                </small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-6">
+                <canvas id="criteriaRadarChart"></canvas>
+                <div id="totalScoreDiv" class="text-center" style="display: none;">
+                    <h3>Score: <span id="totalScorePercent"></span></h3>
+                </div>
+                <div id="messageOfScoreDiv" class="text-center" style="display: none;">
+                    <h4><span id="messageScore"></span></h4>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-4 text-center">
+            <button class="btn btn-secondary mb-4" id="resetButton" onclick="resetPage()">Reset</button>
+            <button class="btn btn-primary mb-4" id="checkMyArchiButton" onclick="checkMyArchi()">
+                <i class="fas fa-check"></i> Check my Archi.
+            </button>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+    <script src="js/main.js"></script>
+</body>
+
+</html>
